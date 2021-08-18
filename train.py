@@ -59,7 +59,7 @@ def train(input_height,input_width,input_chan,tfrec_dir,batchsize,learnrate,epoc
     '''
     Define the model
     '''
-    model = customcnn(input_shape=(input_height, input_width, input_chan),classes=6,filters=[8,8,16,64,128])
+    model = customcnn(input_shape=(input_height, input_width, input_chan),classes=6,filters=[8,16,32,64,128])
 
     print('\n'+DIVIDER)
     print(' Model Summary')
