@@ -55,7 +55,7 @@ def skip_blk(input,filters,kernel_size=3,strides=1):
     return net
 
 
-def customcnn(input_shape=(None, None, None),classes=None, filters=[8,8,16,64,128]):
+def customcnn(input_shape=(None, None, None),classes=None, filters=[8,16,32,64,128]):
     '''
     Arguments:
       input_shape: tuple of integers indicating height, width, channels
