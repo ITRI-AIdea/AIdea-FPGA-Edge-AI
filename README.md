@@ -1,6 +1,6 @@
 # FPGA Edge AI – AOI Tutorial #
 
-This tutorial shows you how to generate a baseline .xmodel for AIdea AOI contest on FPGA(Xilinx Alveo U50LV10E) using codes modified from Xilinx Vitis-AI-Tutorials 08-tf2_flow by Aidea members. We hope that by following these steps, you could become more familiar with Vitis-AI and the competition.
+### This tutorial shows you how to generate a baseline .xmodel for AIdea AOI contest on FPGA(Xilinx Alveo U50LV10E) using codes modified from Xilinx Vitis-AI-Tutorials 08-tf2_flow by Aidea members. We hope that by following these steps, you could become more familiar with Vitis-AI and the competition.
 
 ## Step 0: Meet Prerequisite 
 
