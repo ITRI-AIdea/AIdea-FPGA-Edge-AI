@@ -17,7 +17,7 @@ $ git clone https://github.com/ITRI-AIdea/FPGA-Edge-AI.git
 ```
 ## Step 2: Download Datasets
 
-Enter FPGA-Edge-AI directory. Use AIdea CLI tool to download training images.
+Enter FPGA-Edge-AI directory. Use AIdea CLI tool to download training images and label file (train_images.zip and train.csv).
 ```
 $ cd FPGA-Edge-AI
 ```
@@ -31,13 +31,9 @@ $ unzip train_images.zip
 ```
 ## Step 4: Label Datasets
 
-Copy aoi_rename.sh to train_images directory. Execute aoi_rename.sh to rename and label the training images. Remove aoi_rename.sh to avoid errors.
+Execute aoi_rename.py to rename and label the training images.
 ```
-$ cp aoi_rename.sh train_images
-$ cd train_images
-$ source aoi_rename.sh
-$ rm aoi_rename.sh
-$ cd ..
+$ python3 aoi_rename.py
 ```
 ## Step 5: Prepare Datasets
 
