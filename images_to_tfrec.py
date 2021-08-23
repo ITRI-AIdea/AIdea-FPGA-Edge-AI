@@ -33,6 +33,8 @@ as this script, then this script should be run.
 Author: Mark Harvey
 '''
 
+#NOTICE: THIS FILE HAS BEEN MODIFIED BY Industrial Technology Research Institute FOR AOI ON XILINX ALVEO U50LV10E
+
 import os
 import argparse
 import zipfile
