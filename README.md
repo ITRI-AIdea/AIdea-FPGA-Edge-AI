@@ -6,7 +6,7 @@
 
 Follow the instructions of VitisAI_TF2-Tutorial.pdf to build Vitis-AI CPU or GPU docker. You can run the example in VitisAI_TF2-Tutorial.pdf to make sure your Vitis-AI CPU or GPU docker is working and can train, quantize, and compile.
 
-Download VitisAI_TF2-Tutorial.pdf here: “past link here”
+Download VitisAI_TF2-Tutorial.pdf here: “paste link here”
 
 
 ## Step 1: Clone Repo
@@ -41,7 +41,7 @@ $ cd ..
 ```
 ## Step 5: Prepare Datasets
 
-Create dataset/train directory to store training images. Copy the labeled training images to dataset/train directory. 
+Create dataset/train directory to store training images. Copy the labeled training images to the dataset/train directory.
 ```
 $ mkdir dataset
 $ cd dataset
@@ -75,13 +75,13 @@ $ python -u quantize.py --evaluate 2>&1 | tee quantize.log
 ```
 ## Step 10: Compile Model
 
-Vitis-AI Compiler can compile .xmodel which contain instructions and data to be executed by FPGA cards. Note that we need to specify which FPGA target board we want to run inference on. In this competition, we use Xilinx Alveo U50LV10E acceleration card. The compiled .xmodel will be saved at compiled_model directory.
+Vitis-AI Compiler can compile .xmodel which contains instructions and data to be executed by FPGA cards. Note that we need to specify which FPGA target board we want to run inference on. In this competition, we use Xilinx Alveo U50LV10E acceleration card. The compiled .xmodel will be saved in the compiled_model directory.
 ```
 $ source compile_my.sh u50lv
 ```
 ## Step 11: Upload .xmodel
 
-When you go to compiled_model directory, you should see deploy.xmodel. Zip deploy.xmodel(only English letter and numbers are allowed in naming, no special character) and then use AIdea CLI tool to hand in your work. 
+When you go to the compiled_model directory, you should see deploy.xmodel. Zip deploy.xmodel(only English letters and numbers are allowed in naming, no special character) and then use AIdea CLI tool to hand in your work.
 ```
 $ cd compiled_model/
 $ zip -r model.zip deploy.xmodel
