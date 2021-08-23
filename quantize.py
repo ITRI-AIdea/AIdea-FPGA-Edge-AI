@@ -22,7 +22,7 @@ Quantize the floating-point model
 '''
 Author: Mark Harvey
 '''
-
+#NOTICE: THIS FILE HAS BEEN MODIFIED BY Industrial Technology Research Institute FOR AOI ON XILINX ALVEO U50LV10E
 
 import argparse
 import os
