@@ -23,6 +23,9 @@ No pooling or fully-connected/dense layers
 '''
 Author: Mark Harvey
 '''
+
+#NOTICE: THIS FILE HAS BEEN MODIFIED BY Industrial Technology Research Institute FOR AOI ON XILINX ALVEO U50LV10E
+
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='3'
 
