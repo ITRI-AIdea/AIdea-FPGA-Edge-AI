@@ -96,3 +96,13 @@ Input channels: 3
 .xmodel is named as deploy.xmodel  
 Submit .zip file with an arbitrary name (as long as it is composed of English letters or numbers)  
 .xmodel without the leading folder and no files other than deploy.xomdel is in the zip
+
+## Additional Tips
+1.	If you want to directly use PNG format images for training, you don’t need to use images_to_tfrec.py. Instead, you need to process images by yourself and make sure your model can accept PNG format input images.
+2.	If you want to change images usage during training or quantization, you can modify functions in dataset_utils.py.
+3.	If you want to design a more complex network architecture and you are ok with tensorflow2 framework, you can simply modify customcnn.py. Please noted that during scoring, both accuracy and throughput(FPS) will be considered. A more complex model will not guarantee a better score.
+4.	You can use other frameworks supported by Vitis-AI such as PyTorch or Caffe to develop your work. However, different frameworks have different quauntizers that take different input files. 
+5.	Since U50LV10E acceleration card has multiple DPU cores, parallel programming and the reduction of dependencies are good approaches for better throughput.
+6.	It is highly encouraged to have a deeper understanding of FPGA cards or more specifically, Xilinx Alveo U50LV10E acceleration card since a more hardware-friendly design could lead you to a better score.
+7.	For more information regarding Vitis-AI such as supported frameworks, DPU operations and limitations, Quantizer usage, see the following link: https://www.xilinx.com/support/documentation/sw_manuals/vitis_ai/1_3/ug1414-vitis-ai.pdf
+
