@@ -87,3 +87,5 @@ $ cd compiled_model/
 $ zip -r model.zip deploy.xmodel
 ```
 AIdea CLI tool usage: https://github.com/ITRI-AIdea/aidea-cli
+
+## Important Notices
