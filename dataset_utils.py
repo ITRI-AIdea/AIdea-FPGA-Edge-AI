@@ -18,6 +18,10 @@ Utility functions for tf.data pipeline
 '''
 Author: Mark Harvey, Xilinx Inc
 '''
+
+#NOTICE: THIS FILE HAS BEEN MODIFIED BY Industrial Technology Research Institute FOR AOI ON XILINX ALVEO U50LV10E
+
+
 import os
 
 # Silence TensorFlow messages
