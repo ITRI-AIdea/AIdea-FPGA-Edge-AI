@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Copyright 2021 Industrial Technology Research Institute
+
 # Copyright 2020 Xilinx Inc.
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,6 +17,9 @@
 # limitations under the License.
 
 # Author: Mark Harvey, Xilinx Inc
+
+#NOTICE: THIS FILE HAS BEEN MODIFIED BY Industrial Technology Research Institute FOR AOI ON XILINX ALVEO U50LV10E
+
 
 if [ $1 = zcu102 ]; then
       ARCH=/opt/vitis_ai/compiler/arch/DPUCZDX8G/ZCU102/arch.json
