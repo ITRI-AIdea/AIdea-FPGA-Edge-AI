@@ -89,13 +89,14 @@ AIdea CLI tool usage: https://github.com/ITRI-AIdea/aidea-cli
 1.	If you need helps or have questions regarding this tutorial, feel free to ask here: “paste link here”
 2.	This tutorial is tested using Vitis-AI 1.4 GPU docker with compatible Nvidia GPU and CUDA support. The provided codes are tested using Tensorflow2.3. 
 3.	The network used by this tutorial is pretty simple and the projected scores will not be too great. It is provided for you to get familiar with this competition. You will receive no rewards if you don’t do any modifications.
-4.	When you try to modify codes, please make sure the following requirements are met, or your submission may fail:  
-The size of input images: 512*512 pixels  
+4.	**When you try to modify codes, please make sure the following requirements are met, or your submission may fail:**
+> ***The size of input images: 512x512 pixels  
 Input channels: 3  
 .xmodel can run on Xilinx Alveo U50LV10E  
 .xmodel is named as deploy.xmodel  
 Submit .zip file with an arbitrary name (as long as it is composed of English letters or numbers)  
-.xmodel without the leading folder and no files other than deploy.xmodel is in the zip
+.xmodel without the leading folder and no files other than deploy.xmodel is in the zip***
+
 
 ## Additional Tips
 1.	If you want to directly use PNG format images for training, you don’t need to use images_to_tfrec.py. Instead, you need to process images by yourself and make sure your model can accept PNG format input images.
@@ -105,5 +106,3 @@ Submit .zip file with an arbitrary name (as long as it is composed of English le
 5.	Since U50LV10E acceleration card has multiple DPU cores, parallel programming and the reduction of dependencies are good approaches for better throughput.
 6.	It is highly encouraged to have a deeper understanding of FPGA cards or more specifically, Xilinx Alveo U50LV10E acceleration card since a more hardware-friendly design could lead you to a better score.
 7.	For more information regarding Vitis-AI such as supported frameworks, DPU operations and limitations, Quantizer usage, see the following link: https://www.xilinx.com/support/documentation/sw_manuals/vitis_ai/1_3/ug1414-vitis-ai.pdf
-
-<font color=#FF0000>紅色</font>
