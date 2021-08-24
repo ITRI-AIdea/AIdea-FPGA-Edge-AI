@@ -95,7 +95,7 @@ Input channels: 3
 .xmodel can run on Xilinx Alveo U50LV10E  
 .xmodel is named as deploy.xmodel  
 Submit .zip file with an arbitrary name (as long as it is composed of English letters or numbers)  
-.xmodel without the leading folder and no files other than deploy.xomdel is in the zip
+.xmodel without the leading folder and no files other than deploy.xmodel is in the zip
 
 ## Additional Tips
 1.	If you want to directly use PNG format images for training, you don’t need to use images_to_tfrec.py. Instead, you need to process images by yourself and make sure your model can accept PNG format input images.
