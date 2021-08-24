@@ -106,3 +106,4 @@ Submit .zip file with an arbitrary name (as long as it is composed of English le
 6.	It is highly encouraged to have a deeper understanding of FPGA cards or more specifically, Xilinx Alveo U50LV10E acceleration card since a more hardware-friendly design could lead you to a better score.
 7.	For more information regarding Vitis-AI such as supported frameworks, DPU operations and limitations, Quantizer usage, see the following link: https://www.xilinx.com/support/documentation/sw_manuals/vitis_ai/1_3/ug1414-vitis-ai.pdf
 
+<font color=#FF0000>紅色</font>
