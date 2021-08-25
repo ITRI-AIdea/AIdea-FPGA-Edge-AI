@@ -4,7 +4,7 @@
 
 ## Step 0: Meet Prerequisite 
 
-Follow the instructions of VitisAI_TF2-Tutorial.pdf to build Vitis-AI CPU or GPU docker. You can run the example in VitisAI_TF2-Tutorial.pdf to make sure your Vitis-AI CPU or GPU docker is working and can train, quantize, and compile.
+Follow the instructions of VitisAI_TF2-Tutorial.pdf to build Vitis-AI CPU or GPU docker.
 
 Download [VitisAI_TF2-Tutorial.pdf](http://buckets.aidea-web.tw/VitisAI_TF2_Tutorial.pdf)
 
