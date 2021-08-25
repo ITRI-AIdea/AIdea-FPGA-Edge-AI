@@ -1,4 +1,4 @@
-# FPGA Edge AI – AOI Tutorial #
+# AIdea FPGA Edge AI – AOI Tutorial #
 
 ### This tutorial shows you how to generate a baseline .xmodel for AIdea AOI contest on FPGA(Xilinx Alveo U50LV10E) using codes modified from Xilinx Vitis-AI-Tutorials 08-tf2_flow by Aidea members. We hope that by following these steps, you could become more familiar with Vitis-AI and the competition.     
 
@@ -13,13 +13,13 @@ Download [VitisAI_TF2-Tutorial.pdf](http://buckets.aidea-web.tw/VitisAI_TF2_Tuto
 
 Enter Vitis-AI CPU or GPU docker container and then download this repository at the directory that you want. (eg. workspace)
 ```
-$ git clone https://github.com/ITRI-AIdea/FPGA-Edge-AI.git
+$ git clone https://github.com/ITRI-AIdea/AIdea-FPGA-Edge-AI.git
 ```
 ## Step 2: Download Datasets
 
-Enter FPGA-Edge-AI directory. Use AIdea CLI tool to download training images and label file (train_images.zip and train.csv).
+Enter AIdea-FPGA-Edge-AI directory. Use AIdea CLI tool to download training images and label file (train_images.zip and train.csv).
 ```
-$ cd FPGA-Edge-AI
+$ cd AIdea-FPGA-Edge-AI
 ```
 AIdea CLI tool usage: https://github.com/ITRI-AIdea/aidea-cli
 
@@ -73,7 +73,7 @@ $ python -u quantize.py --evaluate 2>&1 | tee quantize.log
 
 Vitis-AI Compiler can compile .xmodel which contains instructions and data to be executed by FPGA cards. Note that we need to specify which FPGA target board we want to run inference on. In this competition, we use Xilinx Alveo U50LV10E acceleration card. The compiled .xmodel will be saved in the compiled_model directory.
 ```
-$ source compile_my.sh u50lv
+$ source compile.sh u50lv
 ```
 ## Step 11: Upload .xmodel
 
