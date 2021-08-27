@@ -1,19 +1,26 @@
-# Copyright 2021 Industrial Technology Research Institute
-'''
- Copyright 2020 Xilinx Inc.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-     http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
-'''
+#  Copyright 2021 Industrial Technology Research Institute
+#
+#  Copyright 2020 Xilinx Inc.
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#
+#  NOTICE: This file has been modified by Industrial Technology Research Institute for AIdea "FPGA Edge AI – AOI Defect
+#  Classification" competition tutorial
+#
+#  Original Author: Mark Harvey, Xilinx Inc.
 
 '''
-This script will convert the images from the dogs-vs-cats dataset into TFRecords.
+This script will convert the images from the AOI dataset into TFRecords.
 
 Each TFRecord contains 5 fields:
 
@@ -23,17 +30,9 @@ Each TFRecord contains 5 fields:
 - channels
 - image - JPEG encoded
 
-The dataset must be downloaded from https://www.kaggle.com/c/dogs-vs-cats/data
- - this will require a Kaggle account.
-The downloaded 'dogs-vs-cats.zip' archive should be placed in the same folder 
-as this script, then this script should be run.
+The dataset must be downloaded from https://aidea-web.tw/topic/701e1e79-84ff-49a5-86ee-a7f01c24c6f7
+ - this will require an AIdea account.
 '''
-
-'''
-Author: Mark Harvey
-'''
-
-#NOTICE: THIS FILE HAS BEEN MODIFIED BY Industrial Technology Research Institute FOR AOI ON XILINX ALVEO U50LV10E
 
 import os
 import argparse
@@ -142,6 +141,7 @@ def make_tfrec(dataset_dir, tfrec_dir, img_shard):
     c3Images = []
     c4Images = []
     c5Images = []
+
     for img in imageList:
         class_name, _ = img.split('.', 1)
         if class_name == '0':
@@ -156,19 +156,16 @@ def make_tfrec(dataset_dir, tfrec_dir, img_shard):
             c4Images.append(img)
         else:
             c5Images.append(img)
-    # assert(len(catImages)==len(dogImages)), 'Number of images in each class do not match'
 
     # define train/test split as 80:20
-    # split = int(len(dogImages) * 0.2)
+    testImages = c0Images[:(int(len(c0Images) * 0.2))] + c1Images[:(int(len(c1Images) * 0.2))] \
+                 + c2Images[:(int(len(c2Images) * 0.2))] + c3Images[:(int(len(c3Images) * 0.2))] \
+                 + c4Images[:(int(len(c4Images) * 0.2))] + c5Images[:(int(len(c5Images) * 0.2))]
 
-    testImages = c0Images[:(int(len(c0Images) * 0.2))] + c1Images[:(int(len(c1Images) * 0.2))] + c2Images[:(
-        int(len(c2Images) * 0.2))] + c3Images[:(int(len(c3Images) * 0.2))] + c4Images[
-                                                                             :(int(len(c4Images) * 0.2))] + c5Images[:(
-        int(len(c5Images) * 0.2))]
-    trainImages = c0Images[(int(len(c0Images) * 0.2)):] + c1Images[(int(len(c1Images) * 0.2)):] + c2Images[(int(
-        len(c2Images) * 0.2)):] + c3Images[(int(len(c3Images) * 0.2)):] + c4Images[
-                                                                          (int(len(c4Images) * 0.2)):] + c5Images[(int(
-        len(c5Images) * 0.2)):]
+    trainImages = c0Images[(int(len(c0Images) * 0.2)):] + c1Images[(int(len(c1Images) * 0.2)):] \
+                  + c2Images[(int(len(c2Images) * 0.2)):] + c3Images[(int(len(c3Images) * 0.2)):] \
+                  + c4Images[(int(len(c4Images) * 0.2)):] + c5Images[(int(len(c5Images) * 0.2)):]
+
     random.shuffle(testImages)
     random.shuffle(trainImages)
 
