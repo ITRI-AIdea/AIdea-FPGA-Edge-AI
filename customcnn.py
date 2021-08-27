@@ -1,5 +1,3 @@
-
-# Copyright 2021 Industrial Technology Research Institute
 '''
  Copyright 2020 Xilinx Inc.
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,9 +21,6 @@ No pooling or fully-connected/dense layers
 '''
 Author: Mark Harvey
 '''
-
-#NOTICE: THIS FILE HAS BEEN MODIFIED BY Industrial Technology Research Institute FOR AOI ON XILINX ALVEO U50LV10E
-
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='3'
 

@@ -1,5 +1,3 @@
-# Copyright 2021 Industrial Technology Research Institute
-
 '''
  Copyright 2020 Xilinx Inc.
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,10 +18,6 @@ Utility functions for tf.data pipeline
 '''
 Author: Mark Harvey, Xilinx Inc
 '''
-
-#NOTICE: THIS FILE HAS BEEN MODIFIED BY Industrial Technology Research Institute FOR AOI ON XILINX ALVEO U50LV10E
-
-
 import os
 
 # Silence TensorFlow messages
