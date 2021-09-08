@@ -109,7 +109,7 @@ def train(input_height, input_width, input_chan, tfrec_dir, batchsize, learnrate
     # run training
     train_history = model.fit(train_dataset,
                               epochs=epochs,
-                              steps_per_epoch=17500 // batchsize,
+                              steps_per_epoch=1800 // batchsize,
                               validation_data=test_dataset,
                               validation_steps=None,
                               callbacks=callbacks_list,
